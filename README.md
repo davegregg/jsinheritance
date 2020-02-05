@@ -1,22 +1,22 @@
-#  JavaScript prototype-based inheritance visualized
+#  JavaScript Prototypal Inheritance Visualized
 
-This post is actual only for:
-* ECMA-262 5th edition called ECMAScript 5 (ES5)
-* ECMA-262 6th edition called ECMAScript 2015 (ES6)
+This article will assume the following versions of JavaScript:
+* ECMA-262 5th edition, formally known as "ECMAScript 5" (or, ES5)
+* ECMA-262 6th edition, formally known as "ECMAScript 2015" (or, ES6)
+* And above.
 
-This is a beginner-level post to clarify and visualize JavaScript prototype-based inheritance.
+This is a beginner-level article to clarify and to visualize JavaScript prototype-based inheritance (more correctly called "delegation").
 
 ## Motivation
-A lot of incomplete and even wrong info can be found on Internet about JavaScript prototypal inheritance. I will just try to explain it again with help of diagrams.
+A lot of incomplete (and even incorrect) info can be found on the Internet about JavaScript prototypal inheritance. I will try to explain this system more thoroughly and more clearly with help of diagrams.
 
-Understanding JavaScript inheritance mechanics is important, even if you don't plan to use JavaScript OOP patterns, since many of language built-in functionality based on inheritance.
+Understanding the mechanics of JavaScript's prototypal inheritance is important – even if you don't plan to use Object-Oriented Programming (OOP) patterns in JavaScript – because much of language's built-in functionality is based on inheritance. Prototypes are central to a solid understanding of JavaScript.
 
-I am not advocating of using OOP patterns and "classical"-like inheritance in JavaScript at all.
-I personally prefer using "factory" and "mixin" instead of a "constructor" pattern. But this post is not about patterns, it is only about JavaScript prototype-based inheritance *mechanics* visualization.
+I (Ruslan) am not advocating for using OOP patterns or "traditional" inheritance in JavaScript. I personally prefer using "factory" and "mixin" patterns over the "constructor" pattern. But this article is not about patterns; it is about the *mechanics* of JavaScript prototype-based inheritance.
 
-**Diagrams notation:**
+**Diagram Guide:**
 * Blocks are JavaScript objects
-* Title of the block denotes an accessor to that object
+* The title of the block denotes an accessor to that object
 * All other sections in a block are properties of this object
 * Arrows are references, with meaning, that given property holds reference to a pointed object. Source of arrow is important, it identifies property, but end is not, it is always points to another object
 * Prototype chain, which is used by JavaScript inheritance system is colored in red
